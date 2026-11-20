@@ -1,0 +1,99 @@
+/* Shared stylesheet of the three pages (index.html, about.html, research.html, teaching.html, data.html).
+   Light mode only (Jean, 2026-11-20). Fonts are self-hosted in fonts/ (SIL OFL 1.1). */
+@font-face {
+  font-family: "Martian Mono Narrow";
+  src: url("fonts/MartianMono-NrLt.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/source-sans-3-latin-400-normal.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/source-sans-3-latin-400-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/source-sans-3-latin-600-normal.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+:root {
+  --bg: #ffffff;
+  --text: #2b2b2b;
+  --muted: #6b6b6b;
+  --rule: #e2e2e2;
+  --link: rgb(0, 116, 217);
+}
+/* Light mode only (Jean, 2026-11-20): no dark-mode rules. */
+html { color-scheme: light; }
+/* Same horizontal position on every page (2026-11-20): reserve the scrollbar's width even on short
+   pages (Home, Data), so that the centered column does not shift between short and long pages. */
+html { overflow-y: scroll; scrollbar-gutter: stable; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+main { max-width: 700px; margin: 0 auto; padding: 56px 16px 64px; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+h1, h2 {
+  font-family: "Martian Mono Narrow", "Source Sans 3", monospace;
+  font-weight: 300;
+  color: var(--link);
+  letter-spacing: 0.01em;
+}
+h1 { font-size: 2.1rem; margin: 0 0 6px; line-height: 1.2; }
+h2 { font-size: 1.25rem; margin: 44px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1rem; font-weight: 600; margin: 22px 0 6px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.fields { margin: 0 0 10px; color: var(--muted); }
+.links { margin: 0; }
+.links a + a::before { content: "·"; color: var(--muted); margin: 0 10px 0 6px; display: inline-block; }
+.bio { margin-top: 28px; }
+.entry { margin: 0 0 18px; }
+.title { font-weight: 600; }
+.meta { color: var(--muted); }
+details { margin: 4px 0 0; }
+summary { cursor: pointer; color: var(--link); font-size: 0.95rem; width: fit-content; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "▸"; display: inline-block; width: 1em; transition: transform 0.15s; }
+details[open] > summary::before { transform: rotate(90deg); }
+details[open] > summary { margin-bottom: 2px; }
+details p { margin: 6px 0 0; font-size: 0.97rem; }
+.translation { display: block; color: var(--muted); font-style: italic; }
+.press { color: var(--muted); font-size: 0.93rem; }
+.press a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--rule); }
+.press a:hover { color: var(--link); }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.date { color: var(--muted); white-space: nowrap; font-size: 0.95rem; }
+.cv-entry { margin: 0 0 14px; }
+.desc { margin: 4px 0 2px; font-size: 0.97rem; }
+footer { margin-top: 56px; font-size: 0.9rem; color: var(--muted); }
+@media print {
+  body { font-size: 11pt; }
+  main { padding: 0; max-width: none; }
+  a { color: inherit; }
+  summary { display: none; }
+  details > p { display: block; }
+}
+@media (max-width: 480px) {
+  .row { flex-direction: column; gap: 0; }
+  body { font-size: 17px; }
+  h1 { font-size: 1.8rem; }
+  main { padding-top: 36px; }
+}
+
+/* Navigation bar, on every page (2026-11-20) */
+.nav { margin: 14px 0 0; font-size: 0.95rem; }
+.nav a + a::before { content: "·"; color: var(--muted); margin: 0 10px 0 6px; display: inline-block; }
+.nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
