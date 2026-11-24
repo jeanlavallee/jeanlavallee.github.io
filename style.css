@@ -78,7 +78,6 @@ details p { margin: 6px 0 0; font-size: 0.97rem; }
 .date { color: var(--muted); white-space: nowrap; font-size: 0.95rem; }
 .cv-entry { margin: 0 0 14px; }
 .desc { margin: 4px 0 2px; font-size: 0.97rem; }
-footer { margin-top: 56px; font-size: 0.9rem; color: var(--muted); }
 @media print {
   body { font-size: 11pt; }
   main { padding: 0; max-width: none; }
