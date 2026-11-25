@@ -2,7 +2,7 @@
 
 | Fichier | Date | Provenance | Contenu |
 |---|---|---|---|
-| `cv.pdf` | 2026-11-20 | Compilé depuis `~/Documents/GitHub/phd-applications/cv/cv_web.tex` | CV public, sans adresse postale ni téléphone |
+| `cv.pdf` | 2026-11-24 | Compilé depuis `~/Documents/GitHub/phd-applications/cv/cv_web.tex` | CV public, sans adresse postale ni téléphone |
 | `measuring_ideology_parties_worldwide_2025.pdf` | Téléchargé le 2026-11-20 | https://vrollet.github.io/files/Ideology.pdf (PDF créé le 6 novembre 2025) | Note « Measuring the Ideology of Political Parties Worldwide » de Jean Lavallée, Benjamin Marx, Vincent Pons et Vincent Rollet, 11 pages. Copie identique à la version publiée ce jour-là ; Jean a demandé le 2026-11-20 que le site héberge son propre exemplaire. |
 | `insee_references_light_rail_2026.pdf` | Téléchargé le 2026-11-20 | https://www.insee.fr/fr/statistiques/fichier/8687965/FET2026-E1.pdf | Dossier Insee Références « Cinq millions d’habitants à proximité d’un tramway… » (La France et ses territoires, septembre 2026), 11 pages. Licence Ouverte 2.0 (Etalab) : réutilisation libre avec la mention « Source : Insee » (https://insee.fr/fr/information/2008466). |
 | `sies_cpge_litteraires_2025.pdf` | Téléchargé le 2026-11-20 | https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2025-10/ni-sies-2025-10-38047.pdf | Note d’information du SIES 25.10 (octobre 2025), avec Julien Silhol, 8 pages.  |
